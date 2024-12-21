@@ -9,6 +9,12 @@ export async function POST(req){
     return NextResponse.json({message:"Blog Created"},{status:"201"});
 }
 
+export async function GET(){
+    await connentDB();
+    const blogs = await Blog.find({});
+    return NextResponse.json(blogs);
+}
+
 // More check safety code is here -->
 // import connectDB from "../../../db/index.js";
 // import { Blog } from "../../../models/blog.model.js";
