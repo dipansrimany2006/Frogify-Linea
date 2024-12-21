@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className="container mx-auto px-4 py-16">
       {/* Hero Section */}
-      <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12 mb-20">
+      <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-8 mb-20 ml-20 mr-20">
         <div className="flex-1 space-y-6">
           <h1 className="text-4xl md:text-6xl font-bold text-foreground">
             Welcome to Frogify
@@ -26,7 +26,7 @@ export default function Home() {
         <div className="flex-1">
           <div className="relative w-full aspect-square max-w-[500px] mx-auto">
             <Image
-              src="/public/Frogify-hero.jpeg"
+              src="/Project-Logo.png"
               alt="Blog Hero"
               fill
               className="object-cover rounded-lg"
@@ -38,7 +38,7 @@ export default function Home() {
 
       {/* Featured Posts Section */}
       <section className="mb-20">
-        <h2 className="text-3xl font-bold text-foreground mb-8">Featured Posts</h2>
+        <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Featured Posts</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[1, 2, 3].map((item) => (
             <div key={item} className="bg-background rounded-lg shadow-sm p-6 space-y-4">
