@@ -6,12 +6,15 @@ export default function Contact() {
   return (
     <main className="container mx-auto px-4 py-16 max-w-4xl">
       <h1 className="text-4xl font-bold text-foreground mb-8">Contact Us</h1>
-      
+
       <div className="space-y-8 bg-background shadow-sm rounded-lg p-8">
         <div className="grid gap-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <label htmlFor="firstName" className="text-sm font-medium text-muted-foreground">
+              <label
+                htmlFor="firstName"
+                className="text-sm font-medium text-muted-foreground"
+              >
                 First Name
               </label>
               <Input
@@ -21,7 +24,10 @@ export default function Contact() {
               />
             </div>
             <div className="space-y-2">
-              <label htmlFor="lastName" className="text-sm font-medium text-muted-foreground">
+              <label
+                htmlFor="lastName"
+                className="text-sm font-medium text-muted-foreground"
+              >
                 Last Name
               </label>
               <Input
@@ -33,7 +39,10 @@ export default function Contact() {
           </div>
 
           <div className="space-y-2">
-            <label htmlFor="email" className="text-sm font-medium text-muted-foreground">
+            <label
+              htmlFor="email"
+              className="text-sm font-medium text-muted-foreground"
+            >
               Email
             </label>
             <Input
@@ -45,7 +54,10 @@ export default function Contact() {
           </div>
 
           <div className="space-y-2">
-            <label htmlFor="message" className="text-sm font-medium text-muted-foreground">
+            <label
+              htmlFor="message"
+              className="text-sm font-medium text-muted-foreground"
+            >
               Message
             </label>
             <Textarea
@@ -55,23 +67,25 @@ export default function Contact() {
             />
           </div>
 
-          <Button className="w-full md:w-auto">
-            Send Message
-          </Button>
+          <Button className="w-full md:w-auto">Send Message</Button>
         </div>
 
         <div className="border-t border-border pt-8 mt-8">
-          <h2 className="text-2xl font-semibold text-foreground mb-4">Other Ways to Reach Us</h2>
+          <h2 className="text-2xl font-semibold text-foreground mb-4">
+            Other Ways to Reach Us
+          </h2>
           <div className="space-y-4 text-muted-foreground">
             <p>
-              <strong className="text-foreground">Email:</strong> contact@opentales.com
+              <strong className="text-foreground">Email:</strong>{" "}
+              contact@opentales.com
             </p>
             <p>
-              <strong className="text-foreground">Phone:</strong> +1 (555) 123-4567
+              <strong className="text-foreground">Phone:</strong> +1 (555)
+              123-4567
             </p>
             <p>
-              <strong className="text-foreground">Address:</strong> 123 Open Tales Street, 
-              Digital City, DC 12345
+              <strong className="text-foreground">Address:</strong> 123 Open
+              Tales Street, Digital City, DC 12345
             </p>
           </div>
         </div>

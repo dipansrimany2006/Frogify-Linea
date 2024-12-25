@@ -17,7 +17,7 @@ export async function PUT(req, { params }) {
   );
 }
 
-export async function GET(request,{ params }) {
+export async function GET(request, { params }) {
   const { id } = params;
   await connentDB();
   const blog = await Blog.findOne({ _id: id });

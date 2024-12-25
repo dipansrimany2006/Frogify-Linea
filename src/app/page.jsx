@@ -12,7 +12,8 @@ export default function Home() {
             Welcome to Frogify
           </h1>
           <p className="text-xl text-muted-foreground">
-            Discover stories, thoughts, and insights from our community of writers and thinkers.
+            Discover stories, thoughts, and insights from our community of
+            writers and thinkers.
           </p>
           <div className="flex gap-4">
             <Button size="lg">
@@ -38,10 +39,15 @@ export default function Home() {
 
       {/* Featured Posts Section */}
       <section className="mb-20">
-        <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Featured Posts</h2>
+        <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
+          Featured Posts
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[1, 2, 3].map((item) => (
-            <div key={item} className="bg-background rounded-lg shadow-sm p-6 space-y-4">
+            <div
+              key={item}
+              className="bg-background rounded-lg shadow-sm p-6 space-y-4"
+            >
               <div className="relative w-full aspect-video mb-4">
                 <Image
                   src={`/blog-${item}.jpg`}
@@ -51,14 +57,17 @@ export default function Home() {
                 />
               </div>
               <div className="space-y-2">
-                <span className="text-sm text-muted-foreground">Dec 1, 2023</span>
+                <span className="text-sm text-muted-foreground">
+                  Dec 1, 2023
+                </span>
                 <h3 className="text-xl font-semibold text-foreground">
                   Featured Blog Post Title {item}
                 </h3>
                 <p className="text-muted-foreground">
-                  A brief preview of the blog post content that gives readers an idea of what to expect...
+                  A brief preview of the blog post content that gives readers an
+                  idea of what to expect...
                 </p>
-                <Link 
+                <Link
                   href={`/blog/${item}`}
                   className="text-primary hover:text-primary/80"
                 >
@@ -73,7 +82,9 @@ export default function Home() {
       {/* Newsletter Section */}
       <section className="bg-background shadow-sm rounded-lg p-8 max-w-4xl mx-auto">
         <div className="text-center space-y-4">
-          <h2 className="text-2xl font-bold text-foreground">Subscribe to Our Newsletter</h2>
+          <h2 className="text-2xl font-bold text-foreground">
+            Subscribe to Our Newsletter
+          </h2>
           <p className="text-muted-foreground">
             Get the latest posts and updates delivered directly to your inbox.
           </p>

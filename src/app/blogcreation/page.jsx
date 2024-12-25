@@ -1,17 +1,17 @@
-"use client"
+"use client";
 import { Button } from "../../components/ui/button";
 import { Input } from "../../components/ui/input";
 import { Textarea } from "../../components/ui/textarea";
 import { useState } from "react";
 import Image from "next/image";
-import MarkdownPreview from '@uiw/react-markdown-preview'; // You'll need to install this package
+import MarkdownPreview from "@uiw/react-markdown-preview"; // You'll need to install this package
 
 export default function BlogCreation() {
   const [blogData, setBlogData] = useState({
-    title: '',
-    description: '',
-    content: '',
-    coverImage: null
+    title: "",
+    description: "",
+    content: "",
+    coverImage: null,
   });
   const [isPreview, setIsPreview] = useState(false);
   const [imagePreview, setImagePreview] = useState(null);
@@ -79,7 +79,9 @@ export default function BlogCreation() {
                 </label>
                 <Input
                   value={blogData.title}
-                  onChange={(e) => setBlogData({ ...blogData, title: e.target.value })}
+                  onChange={(e) =>
+                    setBlogData({ ...blogData, title: e.target.value })
+                  }
                   className="w-full bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                   placeholder="Enter your blog title"
                 />
@@ -92,7 +94,9 @@ export default function BlogCreation() {
                 </label>
                 <Textarea
                   value={blogData.description}
-                  onChange={(e) => setBlogData({ ...blogData, description: e.target.value })}
+                  onChange={(e) =>
+                    setBlogData({ ...blogData, description: e.target.value })
+                  }
                   className="w-full bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                   placeholder="Write a brief description of your blog"
                   rows={3}
@@ -106,7 +110,9 @@ export default function BlogCreation() {
                 </label>
                 <Textarea
                   value={blogData.content}
-                  onChange={(e) => setBlogData({ ...blogData, content: e.target.value })}
+                  onChange={(e) =>
+                    setBlogData({ ...blogData, content: e.target.value })
+                  }
                   className="w-full min-h-[400px] bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono"
                   placeholder="Write your blog content using Markdown..."
                 />
@@ -125,7 +131,9 @@ export default function BlogCreation() {
                 </div>
               )}
               <h1>{blogData.title}</h1>
-              <p className="text-lg text-gray-600 dark:text-gray-300">{blogData.description}</p>
+              <p className="text-lg text-gray-600 dark:text-gray-300">
+                {blogData.description}
+              </p>
               <MarkdownPreview source={blogData.content} />
             </div>
           )}
@@ -136,7 +144,7 @@ export default function BlogCreation() {
               variant="outline"
               className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
             >
-              {isPreview ? 'Edit' : 'Preview'}
+              {isPreview ? "Edit" : "Preview"}
             </Button>
             <Button className="bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900">
               Publish Blog
