@@ -11,17 +11,20 @@ export default function BlogCreation() {
     title: "",
     description: "",
     content: "",
-    coverImage: null,
   });
   const [isPreview, setIsPreview] = useState(false);
   const [imagePreview, setImagePreview] = useState(null);
 
-  const handleImageUpload = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      setBlogData({ ...blogData, coverImage: file });
-      setImagePreview(URL.createObjectURL(file));
-    }
+  // const handleImageUpload = (e) => {
+  //   const file = e.target.files[0];
+  //   if (file) {
+  //     setBlogData({ ...blogData, coverImage: file });
+  //     setImagePreview(URL.createObjectURL(file));
+  //   }
+  // };
+
+  const handelSubmit = (e) => {
+    e.preventDefault(); 
   };
 
   return (
@@ -40,7 +43,7 @@ export default function BlogCreation() {
           {!isPreview ? (
             <div className="space-y-6">
               {/* Cover Image Upload */}
-              <div className="space-y-2">
+              {/* <div className="space-y-2">
                 <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
                   Cover Image
                 </label>
@@ -70,7 +73,7 @@ export default function BlogCreation() {
                     </div>
                   )}
                 </div>
-              </div>
+              </div> */}
 
               {/* Blog Title */}
               <div className="space-y-2">
@@ -78,28 +81,12 @@ export default function BlogCreation() {
                   Blog Title
                 </label>
                 <Input
-                  value={blogData.title}
                   onChange={(e) =>
                     setBlogData({ ...blogData, title: e.target.value })
                   }
+                  value={blogData.title}
                   className="w-full bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                   placeholder="Enter your blog title"
-                />
-              </div>
-
-              {/* Short Description */}
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                  Short Description
-                </label>
-                <Textarea
-                  value={blogData.description}
-                  onChange={(e) =>
-                    setBlogData({ ...blogData, description: e.target.value })
-                  }
-                  className="w-full bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-                  placeholder="Write a brief description of your blog"
-                  rows={3}
                 />
               </div>
 
@@ -109,10 +96,10 @@ export default function BlogCreation() {
                   Blog Content (Markdown)
                 </label>
                 <Textarea
-                  value={blogData.content}
                   onChange={(e) =>
                     setBlogData({ ...blogData, content: e.target.value })
                   }
+                  value={blogData.content}
                   className="w-full min-h-[400px] bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono"
                   placeholder="Write your blog content using Markdown..."
                 />
