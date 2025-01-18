@@ -1,5 +1,6 @@
 import React, { cache } from "react";
 import Link from "next/link";
+import Expandable from "../../components/Expandable";
 
 async function getBlogs() {
   try {
@@ -43,9 +44,9 @@ const  page = async () => {
             <h3 className="text-xl font-semibold text-foreground">
               {blog.title}
             </h3>
-            <p className="text-muted-foreground text-ellipsis">
+            <Expandable className="text-muted-foreground text-ellipsis">
               {blog.content}
-            </p>
+            </Expandable>
             <Link
                   href={`/blog/123`}
                   className="text-primary hover:text-primary/80"
